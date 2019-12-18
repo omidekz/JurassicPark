@@ -12,4 +12,4 @@ this repo is a simulation of jurassic park
     change main func in jp.py args
         - first arg is taxis number
         - second arg is passengers number
-        - and last arg is capacity number that default is 1 
+        - and last arg is capacity number that default is 1
