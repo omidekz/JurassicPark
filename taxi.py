@@ -29,9 +29,11 @@ class Taxi(object):
             
             self.msg.inTaxi(self.number)
             time.sleep(self.livein_muesum)
-            self.passengers.clear()
-            for _ in range(self.cap):
+            
+            for p in self.passengers:
+                p.die()
                 self.sem.release()
+            self.passengers.clear()
             self.msg.exitTaxi(self.number)
                 
             
