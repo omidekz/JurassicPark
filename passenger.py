@@ -11,7 +11,6 @@ class Passenger(object):
         self.is_take = False
         self.thread = threading.Thread(target=self.run)
         self.can_die = False
-        self.msg.enterMuseum(self.number)
         Passenger.PASSENGER_NUMBER += 1
     
     def run(self):
@@ -26,6 +25,7 @@ class Passenger(object):
                     break
     
     def start(self):
+        self.msg.enterMuseum(self.number)
         self.thread.start()
         
     def die(self, taxi):
