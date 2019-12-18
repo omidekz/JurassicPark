@@ -28,5 +28,5 @@ class Passenger(object):
         self.msg.enterMuseum(self.number)
         self.thread.start()
         
-    def die(self, taxi):
+    def die(self):
         self.can_die = True
